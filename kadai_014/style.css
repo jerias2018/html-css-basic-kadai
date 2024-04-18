@@ -1,0 +1,58 @@
+/* 共通部門*/
+/* フォント部門*/
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+    font-size: 20px;
+     text-align: center;
+
+    }
+
+
+h1 {
+  font-size: 40px;
+    text-shadow: 1px 1px 2px gray;
+     letter-spacing: 1.2em;
+      border-bottom:solid 3px rgb(115, 115, 114)
+    }   
+     
+span{
+  letter-spacing: 1.2em;  
+    }      
+
+/* googleフォント*/
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+   font-optical-sizing: auto;
+     font-weight: weight;
+       font-style: normal;
+    }
+
+/* カラー部門*/
+.text-pink {
+  color: rgb(255, 192, 203)
+    }
+.text-skyblue {
+  color: skyblue;
+    }
+
+    /*　■ID部門
+idをセレクタに指定するときは先頭に「#（ハッシュ）」をつけます 
+id：任意のid名は同じWebページ内で1回しか設定できない
+id：1つの要素に対して個別のスタイルを指定したいときによく使われる
+*/
+
+#basic {
+  font-weight: bold;
+} 
+
+/*　■Class部門 
+classをセレクタに指定するときは先頭に「.（ドット）」をつけます 
+class：任意のclass名は同じWebページ内で複数設定できる
+class：複数の要素に対して汎用性の高いスタイルをまとめて指定したいときによく使われる
+*/
+
+/*
+.text-blue {
+color: blue;
+}
+*/
