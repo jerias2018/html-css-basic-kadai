@@ -1,0 +1,194 @@
+/*d名とclass名のつけ方ルール
+
+id名とclass名は基本的に好きな名前をつけられます。ただし、あとからコードを見たときにわかりやすい名前をつけましょう。
+例えば、sidebar（サイドバー）やsubmit-button（送信ボタン）などわかりやすい名前をつけておけば、
+CSSファイルのセレクタを見たときに「ここでは送信ボタンのスタイルを指定しているんだな」とすぐわかります。
+なお、id名とclass名にはいくつかのルールがあるので注意が必要です。
+
+使える文字の種類
+id名やclass名に使える文字は以下のとおりです。
+
+- 半角英数
+-（ハイフン）
+_（アンダースコア）
+ただし、名前の先頭は必ずアルファベットにしなければなりません。
+id名やclass名が数字や記号で始まると、認識されなくなってしまうためです。
+
+- 悪い例：1st-section、--main_section
+- 良い例：first-section、main_section
+
+大文字と小文字
+
+CSSではid名やclass名の大文字と小文字を区別します。
+つまり、以下のidやclassは別のものとして扱われます。
+
+- First-Sectionとfirst-section
+- Headingとheading
+id名やclass名には大文字と小文字のどちらも使えます。
+しかし、「HTMLファイルにはHeadingと書いたがCSSファイルのセレクタにはheadingと書いたので、
+スタイルが適用されなかった」といったミスが発生しやすくなります。
+よって、基本的には小文字で統一するようにしましょう。
+*/
+
+/*　■ID部門
+idをセレクタに指定するときは先頭に「#（ハッシュ）」をつけます 
+id：任意のid名は同じWebページ内で1回しか設定できない
+id：1つの要素に対して個別のスタイルを指定したいときによく使われる
+*/
+/*
+#first-heading {
+color: red;
+}
+*/
+
+/*　■Class部門 
+classをセレクタに指定するときは先頭に「.（ドット）」をつけます 
+class：任意のclass名は同じWebページ内で複数設定できる
+class：複数の要素に対して汎用性の高いスタイルをまとめて指定したいときによく使われる
+*/
+
+/*
+.text-blue {
+color: blue;
+}
+*/
+/*
+■フォントの種類を指定する
+フォントの種類を指定するにはfont-familyプロパティを使います。
+値は以下のように、複数のフォント名を「,（カンマ）」で区切って書きます。
+CSSファイル（見本）
+body {
+font-family: "Arial", "Meiryo", sans-serif;
+}
+*/
+
+/* 共通部門
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+    font-size: 20px;
+     text-align: center;
+
+    }
+
+h1 {
+  font-size: 40px;
+    text-shadow: 1px 1px 2px gray;
+     letter-spacing: 1.2em;
+      border-bottom:solid 3px rgb(115, 115, 114)
+    }   
+*/
+
+/* googleフォント
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif;
+   font-optical-sizing: auto;
+     font-weight: weight;
+       font-style: normal;
+    }
+    
+    */
+/* カラー部門
+.text-pink {
+  color: rgb(255, 192, 203)
+    }
+.text-skyblue {
+  color: skyblue;
+    }
+
+
+/*　■ID部門
+idをセレクタに指定するときは先頭に「#（ハッシュ）」をつけます 
+id：任意のid名は同じWebページ内で1回しか設定できない
+id：1つの要素に対して個別のスタイルを指定したいときによく使われる
+*/
+
+#top {
+	width: 800px;
+		background-color:#dcc9f4;   
+      margin-top: 20px;
+        margin-left: auto;
+         margin-right: auto;
+           margin-bottom: 20px;
+            text-align: center;
+      }
+  
+#middle {
+  position: relative;
+    width: 800px;
+      height: 800px;
+       margin-top: 20px;
+        margin-left: auto;
+          margin-right: auto;
+            margin-bottom: 20px;
+              background-color:#ffd9df;   
+            }
+      
+      #middle-child01{
+        width: 200px;
+         height: 200px;
+           background-color:#87ceeb;    
+            position: absolute;
+                        top: 100px;
+                              left: 100px;
+            }
+      
+      #middle-child02{
+        width: 200px;
+         height: 200px;
+           background-color:#87ceeb;
+           position:  absolute;
+                       top: 300px;
+                            left: 300px;  
+            }
+      
+      #middle-child03{
+        width: 200px;
+         height: 200px;
+           background-color:#87ceeb;
+           position:  absolute;
+                        top: 500px;
+                             left: 500px;
+            }   
+           
+#bottom {
+    width: 800px;
+     height: 300px;
+       margin-left: auto;
+        margin-right: auto;
+          background-color:#87ceeb;   
+            }
+
+      #bottom-child01{
+        width: 400px;
+          height: 100px;
+             background-color:#e5dcf0;    
+            }
+            
+     #bottom-child02{
+        width: 400px;
+          height: 100px;
+             background-color:#e5dcf0;
+             position:  relative;
+                  left: 200px;  
+            }
+            
+     #bottom-child03{
+        width: 400px;
+          height: 100px;
+             background-color:#e5dcf0;
+             position:  relative;
+                  left: 400px;  
+            }         
+
+/*　■Class部門 
+classをセレクタに指定するときは先頭に「.（ドット）」をつけます 
+class：任意のclass名は同じWebページ内で複数設定できる
+class：複数の要素に対して汎用性の高いスタイルをまとめて指定したいときによく使われる
+*/
+
+.top-child {
+  width: 20%;
+    background-color:#ffd9df;  
+    display: inline-block; 
+  }
+
