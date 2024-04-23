@@ -1,0 +1,100 @@
+<!--
+★HTML部門
+
+■大見出し、小見出しにする 1>6
+<h1>~<h6>　
+  <p>　段落にする
+<ul>と<li>　箇条書きにする
+<ol>と<li>　番号付きの箇条書きにする
+
+<br>　改行する
+<hr>  水平線を引く
+<div>　要素をグループ化する
+
+<table>　表を作る
+<tr>　表の行を作ります。
+<th>　表の見出しを作ります。
+<td>　表のセルを作ります。
+
+■フォーム
+<form> </form>
+
+■折りたたみ　詳細表示
+<details>
+ <summary>もっと見る</summary> 　
+
+■埋め込みタグ
+ <iframe src="" width="500" height="500"> 
+
+■ハイパーリンク
+<a href="https://www.sejuku.net">SAMURAIのホームページに移動</a> 
+
+■画像を表示 下の階層 ../
+<img src="//photo.jpg" width="200" height="100">
+■ 音声の再生
+<audio src="/audiotag.mp3" controls></audio>
+
+■動画の再生
+<video src="/videotag.mp4" controls width="640"></video> 
+-->
+
+<!--
+★CSS部門
+■id
+ <p id="second-paragraph">段落2です</p>
+■class
+ <p class="paragraph1">段落1です</p>
+-->
+
+
+<!DOCTYPE html>
+
+<html>
+
+ <!--ヘッド部-->
+  <head>
+    <title>22章課題</title>
+    <meta name="description" content="このページは22章の課題です。">   
+     <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">                 
+         <link rel="stylesheet" href="style.css">
+      
+  </head>
+
+ <!--ボディ部-->
+  <body>
+ <!--ヘッダー-->
+   <header>
+     <h1>今日の傘予報</h1>
+       </header>
+
+ <!--メインー-->
+      <main>
+        <div id="parent">
+             <div class="contents">
+              <h2>東京の天気</h2>
+              <p>今日の天気は雨です。</p>
+               <p>傘を持って行ってください。</p>
+               <img src="../kadai_022/images/rainy.png"></div>
+
+             <div class="contents">
+               <h2>北海道の天気</h2>
+               <p>今日の天気は曇りです。</p>
+                <p>傘は念のため持って行きましょう。</p>
+                <img src="../kadai_022/images/cloudy.png"></div>
+
+              <div class="contents">
+               <h2>沖縄の天気</h2>
+               <p>今日の天気は晴れです。</p>
+                <p>傘は必要ないでしょう。</p>
+                <img src="../kadai_022/images/sunny.png"></div>
+            </div>
+        </main>
+
+ <!--フッター-->
+    <footer>
+      <a href="https://www.sejuku.net/corp/">&copy;SAMURAI WEATHER NEWS</a> 
+    </footer>
+
+  </body>
+</html>

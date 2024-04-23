@@ -1,0 +1,178 @@
+/*d名とclass名のつけ方ルール
+
+id名とclass名は基本的に好きな名前をつけられます。ただし、あとからコードを見たときにわかりやすい名前をつけましょう。
+例えば、sidebar（サイドバー）やsubmit-button（送信ボタン）などわかりやすい名前をつけておけば、
+CSSファイルのセレクタを見たときに「ここでは送信ボタンのスタイルを指定しているんだな」とすぐわかります。
+なお、id名とclass名にはいくつかのルールがあるので注意が必要です。
+
+使える文字の種類
+id名やclass名に使える文字は以下のとおりです。
+
+- 半角英数
+-（ハイフン）
+_（アンダースコア）
+ただし、名前の先頭は必ずアルファベットにしなければなりません。
+id名やclass名が数字や記号で始まると、認識されなくなってしまうためです。
+
+- 悪い例：1st-section、--main_section
+- 良い例：first-section、main_section
+
+大文字と小文字
+
+CSSではid名やclass名の大文字と小文字を区別します。
+つまり、以下のidやclassは別のものとして扱われます。
+
+- First-Sectionとfirst-section
+- Headingとheading
+id名やclass名には大文字と小文字のどちらも使えます。
+しかし、「HTMLファイルにはHeadingと書いたがCSSファイルのセレクタにはheadingと書いたので、
+スタイルが適用されなかった」といったミスが発生しやすくなります。
+よって、基本的には小文字で統一するようにしましょう。
+*/
+
+/*　■ID部門
+idをセレクタに指定するときは先頭に「#（ハッシュ）」をつけます 
+id：任意のid名は同じWebページ内で1回しか設定できない
+id：1つの要素に対して個別のスタイルを指定したいときによく使われる
+*/
+/*
+#first-heading {
+color: red;
+}
+*/
+
+/*　■Class部門 
+classをセレクタに指定するときは先頭に「.（ドット）」をつけます 
+class：任意のclass名は同じWebページ内で複数設定できる
+class：複数の要素に対して汎用性の高いスタイルをまとめて指定したいときによく使われる
+*/
+
+/*
+.text-blue {
+color: blue;
+}
+*/
+
+
+/* ■フォントの種類を指定する 
+フォントの種類を指定するにはfont-familyプロパティを使います。
+値は以下のように、複数のフォント名を「,（カンマ）」で区切って書きます。
+CSSファイル（見本）
+*/
+
+/* 共通部門 */
+
+
+body { 
+  margin: 0px 0px;
+   font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+  text-align: center;
+    margin-left:  auto;
+      margin-right: auto;
+        background-color:rgb(244, 79, 79) ;
+      }
+
+
+main {
+  margin: 10px 10px;
+}
+
+footer {
+  background-color:rgb(244, 79, 79);
+    text-align: center;
+}
+
+h1 {
+  margin: 0px 0px;
+  color: rgb(255, 255, 255);
+}   
+
+h2 {
+  font-size: 25px;
+   border-bottom: dotted 3px rgb(236, 122, 122);
+}
+
+h2::before {
+  content: "●";
+  color:rgb(239, 111, 139);
+}
+
+p {
+  margin: 0px 0px;
+    font-size: 20px;
+}
+
+p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+    color:rgb(97, 206, 249);
+}
+
+
+a { 
+  font-size: 20px;
+  color:rgb(255, 255, 255);
+}
+
+a:visited {
+  color:rgb(193, 234, 251);
+}
+
+a:hover {
+  color:rgb(245, 178, 168);
+}
+
+img {
+  margin: 10px 0px;
+ width: 70%  
+}
+
+
+
+
+/* カラー部門
+.text-pink {
+  color: rgb(255, 192, 203)
+    }
+.text-skyblue {
+  color: skyblue;
+    }
+*/
+
+/*　■ID部門
+idをセレクタに指定するときは先頭に「#（ハッシュ）」をつけます 
+id：任意のid名は同じWebページ内で1回しか設定できない
+id：1つの要素に対して個別のスタイルを指定したいときによく使われる
+*/
+
+
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+} 
+
+@media screen and (max-width: 768px) {
+  #parent { display: block; }
+  h2 {font-size: 30px;}
+  p {font-size: 25px;}
+}
+
+/*　■Class部門 
+classをセレクタに指定するときは先頭に「.（ドット）」をつけます 
+class：任意のclass名は同じWebページ内で複数設定できる
+class：複数の要素に対して汎用性の高いスタイルをまとめて指定したいときによく使われる
+*/
+
+.contents {
+  border: solid 3px rgb(238, 204, 204);
+    flex-basis: 25%;
+      padding: 10px 15px;
+         margin: 20px 0px;
+         justify-content: space-around;
+           text-align: center;
+           
+}
